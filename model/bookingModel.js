@@ -18,6 +18,14 @@ const bookingSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
+  date: {
+    type: String,
+    required: true,
+  },
+  time: {
+    type: String,
+    required: true,
+  },
   totalPrice: {
     type: Number,
     required: true,

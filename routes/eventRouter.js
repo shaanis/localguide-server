@@ -10,7 +10,7 @@ eventRouter.get("/events",eventController.getEventController)
 eventRouter.get("/events/:id/detail-events",eventController.getDetailEventController)
 eventRouter.post("/:id/add-booking",jwtMiddleware,eventController.bookEventController)
 // show bookings to user
-eventRouter.get("/user-booking",jwtMiddleware,eventController.bookingHistoryController)
+eventRouter.get("/user-booking",jwtMiddleware,eventController.bookingUserHistoryController)
 // show all bookings in admin page
 eventRouter.get("/all-booking",eventController.bookingHistoryController)
 
