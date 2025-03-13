@@ -33,6 +33,7 @@ const eventSchema = new mongoose.Schema({
         type:Number,
         required:true
     },
+    
 })
 const events = mongoose.model("events",eventSchema)
 module.exports = events

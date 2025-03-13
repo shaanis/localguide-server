@@ -30,6 +30,11 @@ const bookingSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
+  status:{
+    type:String,
+    required:true,
+    default:'pending'
+},
 });
 const bookings = mongoose.model("bookings", bookingSchema);
 module.exports = bookings;
