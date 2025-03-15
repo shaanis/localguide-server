@@ -4,6 +4,8 @@ const cors = require('cors');
 const router = require('./routes/router');
 const hotelRouter = require('./routes/hotelRouter');
 const eventRouter = require('./routes/eventRouter');
+const paymentRoutes = require('./routes/paymentRoutes')
+const Razorpay = require('razorpay');
 require('./database/dbConnection');
 
 const lgServer = express();
@@ -13,7 +15,9 @@ lgServer.use(express.json());
 lgServer.use(router);
 lgServer.use(hotelRouter);
 lgServer.use(eventRouter);
+lgServer.use("/api/razorpay",paymentRoutes );
 lgServer.use('/uploads', express.static('./uploads'));
+
 
 const PORT = process.env.PORT || 3000;
 
